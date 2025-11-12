@@ -36,7 +36,29 @@ def load_data():
         ("Please review the attached report.", 0),
         ("Lunch at 1 PM today?", 0),
         ("Call me when you reach home.", 0),
-        ("Team meeting rescheduled to 3 PM.", 0)
+        ("Team meeting rescheduled to 3 PM.", 0),
+        ("Hi,can you send me the notes from class?", 0),
+         ("Win money now!!!", 1),
+        ("Exclusive offer for you, limited time only!", 1),
+        ("Congratulations! You have won a free iPhone!", 1),
+        ("Claim your $500 cash prize here!", 1),
+        ("Your account is locked. Click to verify now.", 1),
+        ("Urgent! You won a lottery. Respond immediately.", 1),
+        ("You have been selected for a cash reward!", 1),
+        ("Let's meet tomorrow for project discussion.", 0),
+        ("Your appointment is confirmed at 10 AM.", 0),
+        ("Can you send the assignment file?", 0),
+        ("Don't forget about our meeting tomorrow.", 0),
+        ("Please review the attached report.", 0),
+        ("Lunch at 1 PM today?", 0),
+        ("Call me when you reach home.", 0),
+        ("Team meeting rescheduled to 3 PM.", 0),
+        ("Hi, can you send me the notes from class?", 0),
+        ("Please bring your ID card tomorrow.", 0),
+        ("Are you free for a quick call this evening?", 0),
+        ("Let’s meet at the library to study.", 0),
+        ("The results will be announced next week.", 0)
+
     ]
     texts, labels = zip(*data)
     return list(texts), list(labels)
@@ -55,7 +77,7 @@ def build_pipeline():
 # Step 3: Train and evaluate model
 # ------------------------------
 def train_and_evaluate(X, y):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     model = build_pipeline()
     print("\nTraining the model...")
     model.fit(X_train, y_train)
